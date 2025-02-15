@@ -235,4 +235,27 @@ class NacosClientAuthServiceImplTest {
         //when
         assertFalse(nacosClientAuthService.login(properties));
     }
+    
+    @Test
+    void testReLogin() {
+        NacosClientAuthServiceImpl nacosClientAuthService = new NacosClientAuthServiceImpl();
+        nacosClientAuthService.login(new Properties());
+        // reLogin
+        nacosClientAuthService.getLoginIdentityContext(null).setParameter(NacosAuthLoginConstant.RELOGINFLAG, "true");
+        Properties properties = new Properties();
+        properties.setProperty(PropertyKeyConst.USERNAME, "aaa");
+        properties.setProperty(PropertyKeyConst.PASSWORD, "123456");
+        List<String> serverList = new ArrayList<>();
+        serverList.add("localhost");
+        //when
+        assertTrue(nacosClientAuthService.login(properties));
+    }
+    
+    @Test
+    void testGenerateTokenWithInvalidToken() {
+        NacosClientAuthServiceImpl nacosClientAuthService = new NacosClientAuthServiceImpl();
+        long tokenTtl = 18000L;
+        long tokenRefreshWindow = nacosClientAuthService.generateTokenRefreshWindow(tokenTtl);
+        assertTrue(tokenRefreshWindow <= tokenTtl / 10);
+    }
 }

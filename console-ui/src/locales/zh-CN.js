@@ -241,7 +241,8 @@ const I18N_CONF = {
     details: '详情',
     rollback: '回滚',
     pubNoData: '没有数据',
-    toConfigure: '历史版本(保留30天)',
+    toConfigureBegin: '历史版本(保留',
+    toConfigureEnd: '天)',
     dataId: '请输入Data ID',
     dataIdCanNotBeEmpty: 'Data ID不能为空',
     group: '请输入Group',
@@ -255,6 +256,9 @@ const I18N_CONF = {
     historyCompareTitle: '历史版本比较',
     historyCompareLastVersion: '最新版本',
     historyCompareSelectedVersion: '当前选中版本',
+    publishType: '发布类型',
+    formal: '正式版本',
+    gray: '灰度版本',
   },
   HistoryDetail: {
     historyDetails: '历史详情',
@@ -270,6 +274,10 @@ const I18N_CONF = {
     sourceIp: '来源 IP',
     back: '返回',
     namespace: '命名空间',
+    publishType: '发布类型',
+    formal: '正式版本',
+    gray: '灰度版本',
+    grayRule: '灰度规则',
   },
   DashboardCard: {
     importantReminder0: '重要提醒',
@@ -659,6 +667,7 @@ const I18N_CONF = {
     defaultFuzzyd: '已开启默认模糊查询',
     fuzzyd: "添加通配符'*'进行模糊查询",
     query: '查询',
+    checkPermission: '此角色权限已存在！',
   },
   NewPermissions: {
     addPermission: '添加权限',

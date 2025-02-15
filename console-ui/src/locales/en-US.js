@@ -243,7 +243,8 @@ const I18N_CONF = {
     details: 'Details',
     rollback: 'Roll Back',
     pubNoData: 'No results found.',
-    toConfigure: 'Historical Versions (Configuration record is retained for 30 days.)',
+    toConfigureBegin: 'Historical Versions (Configuration record is retained for ',
+    toConfigureEnd: ' days.)',
     dataId: 'Enter Data ID',
     dataIdCanNotBeEmpty: 'Data ID cannot be empty',
     group: 'Enter Group',
@@ -257,6 +258,9 @@ const I18N_CONF = {
     historyCompareTitle: 'History Compare',
     historyCompareLastVersion: 'Lasted Release Version',
     historyCompareSelectedVersion: 'Selected Version',
+    publishType: 'Publish Type',
+    formal: 'Formal Version',
+    gray: 'Gray Version',
   },
   HistoryDetail: {
     historyDetails: 'History Details',
@@ -272,6 +276,10 @@ const I18N_CONF = {
     configureContent: 'Configuration Content',
     back: 'Back',
     namespace: 'Namespace',
+    publishType: 'Publish Type',
+    formal: 'Formal Version',
+    gray: 'Gray Version',
+    grayRule: 'Gray Rule',
   },
   DashboardCard: {
     importantReminder0: 'Important reminder',
@@ -664,6 +672,7 @@ const I18N_CONF = {
     defaultFuzzyd: 'Default fuzzy query mode opened',
     fuzzyd: "Add wildcard '*' for fuzzy query",
     query: 'Search',
+    checkPermission: 'This role permission already exists!',
   },
   NewPermissions: {
     addPermission: 'Add Permission',
